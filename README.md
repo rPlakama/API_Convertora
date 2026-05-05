@@ -1,30 +1,53 @@
-Projeto feito em NestJS.
-
 --> Requires:
 
-```nodejs``` (com nest-cli instalado) ou ```nix``` usando ```nix flake develop``` no dir atual
+    nodejs (com nest-cli instalado) ou nix usando nix flake develop no diretório atual.
 
---> Taks:
+--> Arquitetura e Estrutura (Clean Architecture & SOLID):
+[ ] ---> Estruturar o projeto de forma modular no NestJS
+[ ] ---> Aplicar conceitos de Programação Orientada a Objetos (POO)
+[ ] ---> Camada de Negócio: Criar classes, interfaces de repositório e isolar regras de negócio
+[ ] ---> Camada de Dados: Implementar repositórios, configurar ORM/Banco e integrar API externa de câmbio
+[ ] ---> Camada de Aplicação (Presentation): Criar controllers, mapear requests/responses e validar entradas
 
-[] --> Conexão a uma API de valor atual da moeda;
-[] --> Ferramentas comparativas
-[] --> Receber um valor e sua moeda de origem 'aka: 300 reais, brl'
-[] --> Converter esse valor para USD e EUR (Criar condição se o valor solicitado já for dolar/eur)
-[] --> Expor operações CRUD para gerênciamento de conversões
+--> Regras de Negócio e Validações:
+[ ] ---> Validar se o valor monetário recebido é maior que zero
+[ ] ---> Validar se a moeda de origem informada é válida
+[ ] ---> Garantir que as conversões gerem sempre valores em USD e EUR
+[ ] ---> Criar condição caso o valor solicitado já seja USD ou EUR
+[ ] ---> Desacoplar as taxas de câmbio das regras de negócio principais
 
---> Funcionalidades:
+--> Endpoints (Operações CRUD):
+[ ] ---> POST /conversions: Criar uma conversão de moeda (recebendo amount e fromCurrency)
+[ ] ---> GET /conversions: Listar todas as conversões realizadas (histórico)
+[ ] ---> GET /conversions/{id}: Consultar uma conversão específica
+[ ] ---> PUT /conversions/{id}: Atualizar uma conversão existente (ex: atualizar o amount)
+[ ] ---> DELETE /conversions/{id}: Remover uma conversão
 
-[] ---> Criar uma conversão de moeda
-[] ---> Consultar conversões realizadas (uma moeda pode ter 3 conversões em um dia)
-[] ---> Atualizar uma conversão existente
-[] ---> Remover uma conversão
-[] ---> Converter valores utilizando taxas de câmbio atualizadas ou simuladas
-[] ---> Persistir histórico de conversões
-[] ---> Tratamento de exceções
+--> Funcionalidades e Requisitos Técnicos:
+[ ] ---> Conexão a uma API de valor atual da moeda
+[ ] ---> Ferramentas comparativas
+[ ] ---> Converter valores utilizando taxas de câmbio atualizadas ou simuladas
+[ ] ---> Persistir histórico de conversões no banco de dados
+[ ] ---> Utilizar DTOs (Data Transfer Objects) para trafegar os dados
+[ ] ---> Implementar tratamento de erros básicos e exceções
 
+--> Tech Obrigatórias:
+[X] ---> NestJS
+[ ] ---> TypeScript
+[ ] ---> MongoDB ou MySQL
 
-Tech obrigatorias:
+--> Desafios Extras (Evolução do Projeto):
+[ ] ---> Implementar validação de dados utilizando class-validator
+[ ] ---> Criar documentação automática da API utilizando Swagger/OpenAPI <-- Ou até alguma coisa do OpenRouter (DeepSeek).
 
-[X] --->  NestJS
-[] --->  TypeScript
-[] --->  MongoDB/MySQL
+--> Documentação e Entrega (Até 01 de Junho de 2026):
+[ ] ---> Garantir que o projeto tem uma estrutura de pastas organizada e está funcional
+[ ] ---> Hospedar o código no GitHub (Todos os membros do grupo devem realizar commits)
+[ ] ---> Criar arquivo README.md contendo:
+[ ] - Descrição do projeto
+[ ] - Tecnologias utilizadas
+[ ] - Instruções de instalação
+[ ] - Instruções para execução
+[ ] - Documentação das rotas da API
+[ ] ---> Preparar a apresentação para o dia da AV2
+[ ] ---> Enviar o link do GitHub para o e-mail: mp.claudiany@gmail.com (incluir nomes completos e matrículas do grupo)
