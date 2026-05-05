@@ -14,6 +14,7 @@
       devShells.${system}.default = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
           nodejs
+          nest-cli
         ];
       };
     };
