@@ -21,7 +21,7 @@
 [ ] ---> GET /conversions: Listar todas as conversões realizadas (histórico)
 [ ] ---> GET /conversions/{id}: Consultar uma conversão específica
 [ ] ---> PUT /conversions/{id}: Atualizar uma conversão existente (ex: atualizar o amount)
-[ ] ---> DELETE /conversions/{id}: Remover uma conversão
+[X] ---> DELETE /conversions/{id}: Remover uma conversão
 
 --> Funcionalidades e Requisitos Técnicos:
 [ ] ---> Conexão a uma API de valor atual da moeda
