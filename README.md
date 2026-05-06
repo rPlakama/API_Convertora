@@ -44,4 +44,3 @@
 [ ] - Instruções para execução \
 [ ] - Documentação das rotas da API \
 [ ] ---> Preparar a apresentação para o dia da AV2 \
-[ ] ---> Enviar o link do GitHub para o e-mail: mp.claudiany@gmail.com (incluir nomes completos e matrículas do grupo) \
