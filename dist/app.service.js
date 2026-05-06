@@ -12,6 +12,9 @@ let AppService = class AppService {
     getHello() {
         return 'Hello World!';
     }
+    getMoedas() {
+        return "Atualmente, estão disponiveis essas conversões \n DOLLAR \n EURO \n BRL";
+    }
 };
 exports.AppService = AppService;
 exports.AppService = AppService = __decorate([

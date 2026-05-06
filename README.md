@@ -33,7 +33,7 @@
 
 --> Tech Obrigatórias:
 [X] ---> NestJS
-[ ] ---> TypeScript
+[X] ---> TypeScript
 [ ] ---> MongoDB ou MySQL
 
 --> Desafios Extras (Evolução do Projeto):
