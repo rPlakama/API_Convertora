@@ -13,6 +13,7 @@
 
       devShells.${system}.default = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
+          typescript-language-server
           nodejs
           nest-cli
         ];
