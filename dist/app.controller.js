@@ -13,15 +13,14 @@ exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
 let AppController = class AppController {
-    appService;
     constructor(appService) {
         this.appService = appService;
     }
     getHello() {
         return this.appService.getHello();
     }
-    getMoedas() {
-        return this.appService.getMoedas();
+    async getMoedas() {
+        return await this.appService.getMoedas();
     }
 };
 exports.AppController = AppController;
@@ -32,10 +31,10 @@ __decorate([
     __metadata("design:returntype", String)
 ], AppController.prototype, "getHello", null);
 __decorate([
-    (0, common_1.Get)("moedas"),
+    (0, common_1.Get)('moedas'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", String)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "getMoedas", null);
 exports.AppController = AppController = __decorate([
     (0, common_1.Controller)(),

@@ -1,11 +1,26 @@
 import { Injectable } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  constructor(private readonly httpService: HttpService) {}
+
+  async getMoedas() {
+    const key = 'd073abc7'
+    const url = `https://api.hgbrasil.com/finance?key=${key}`;
+
+    try {
+      const {data} = await firstValueFrom(this.httpService.get(url));
+
+      return data.results.currencies;
+    } catch (error) {
+      return { error: 'Erro ao buscar os dados da API'}
+    }
   }
-  getMoedas(): string {
-    return "Atualmente, estão disponiveis essas conversões \n DOLLAR \n EURO \n BRL";
+  
+  getHello(): string {
+    return 'TESTE';
   }
 }
+
