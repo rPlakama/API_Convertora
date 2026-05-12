@@ -45,3 +45,7 @@
 [ ] - Instruções para execução \
 [ ] - Documentação das rotas da API \
 [ ] ---> Preparar a apresentação para o dia da AV2 \
+
+Rotas atuais:
+
+[X] ---> ```/moedas```, função: Recebe retorno do câmbio atual de todas moedas aparti da API externa.
