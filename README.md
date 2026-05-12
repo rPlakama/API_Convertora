@@ -6,7 +6,8 @@
 [ ] ---> Estruturar o projeto de forma modular no NestJS \
 [ ] ---> Aplicar conceitos de Programação Orientada a Objetos (POO) \
 [ ] ---> Camada de Negócio: Criar classes, interfaces de repositório e isolar regras de negócio \
-[ ] ---> Camada de Dados: Implementar repositórios, configurar ORM/Banco e integrar API externa de câmbio \
+[ ] ---> Camada de Dados: Implementar repositórios, configurar ORM/Banco \
+[X] ---> Integrar API externa de câmbio \
 [ ] ---> Camada de Aplicação (Presentation): Criar controllers, mapear requests/responses e validar entradas \
 --> Regras de Negócio e Validações: \
 [ ] ---> Validar se o valor monetário recebido é maior que zero \
