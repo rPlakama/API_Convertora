@@ -2,7 +2,7 @@ Para rodar:
 
 ```
 npm install # Se tiver clonado agora, só uma vez.
-npm run start # Rodar o nest em si.
+npm run start:dev # Rodar o nest em si.
 
 ```
 
