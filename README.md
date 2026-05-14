@@ -1,8 +1,9 @@
 Para rodar:
 
 ```
-npx nest build -b tsc  # Para Compilar
-npm run start:dev # Para Rodar
+npm install # Se tiver clonado agora, só uma vez.
+npm run start # Rodar o nest em si.
+
 ```
 
 --> Requires: \
