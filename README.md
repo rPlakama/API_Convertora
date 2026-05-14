@@ -1,3 +1,10 @@
+Para rodar:
+
+```
+npx nest build -b tsc  # Para Compilar
+npm run start:dev # Para Rodar
+```
+
 --> Requires: \
 
     nodejs (com nest-cli instalado) ou nix usando nix flake develop no diretório atual. \
