@@ -37,4 +37,4 @@ coverage/
 
 # NixOS / nix-shell
 .direnv/
-result
+

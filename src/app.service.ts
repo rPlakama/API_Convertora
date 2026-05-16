@@ -1,13 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
+import { ConfigService } from '@nestjs/config';
+
 
 @Injectable()
 export class AppService {
-  constructor(private readonly httpService: HttpService) {}
+  constructor(
+    private readonly httpService: HttpService,
+    private readonly configService: ConfigService,
+  ) {}
 
-  async getMoedas() {
-    const key = 'd073abc7'
+  async getMoedas(): Promise<any> {
+    const key = this.configService.get<string>('HG_API_KEY');
     const url = `https://api.hgbrasil.com/finance?key=${key}`;
 
     try {
@@ -18,9 +23,10 @@ export class AppService {
       return { error: 'Erro ao buscar os dados da API'}
     }
   }
-  
+
   getHello(): string {
     return 'TESTE';
   }
 }
 
+                                                                        
